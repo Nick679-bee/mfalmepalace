@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "@/assets/logo-mfalme.png";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 
@@ -16,7 +15,7 @@ const SiteHeader: React.FC = () => {
     <header className="sticky top-0 z-40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="container mx-auto flex items-center justify-between py-3">
         <NavLink to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Mfalme Palace logo" className="h-9 w-9" loading="lazy"/>
+          <img src="/images/logo-mfalme.png" alt="Mfalme Palace logo" className="h-9 w-9" loading="lazy"/>
           <span className="font-display text-xl">Mfalme Palace</span>
         </NavLink>
         <nav className="hidden md:flex items-center gap-6">
@@ -29,6 +28,9 @@ const SiteHeader: React.FC = () => {
         <div className="flex items-center gap-2">
           <Button asChild>
             <NavLink to="/booking">Book Direct</NavLink>
+          </Button>
+          <Button asChild variant="outline">
+            <NavLink to="/admin">Admin</NavLink>
           </Button>
         </div>
       </div>
